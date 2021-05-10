@@ -1,0 +1,83 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+video {
+	width: 40rem;
+	height: 30rem;
+	object-fit: cover;
+}
+
+.main {
+	height: 100vh;
+	display: flex;
+
+	&__left {
+		flex: 0.8;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__videos {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #000;
+
+		&--grid {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: space-between;
+		background: #334443;
+		padding: 0.5rem;
+
+		&--block {
+			display: flex;
+		}
+
+		&--button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			min-width: 8rem;
+			padding: 0.8rem 1rem;
+			cursor: pointer;
+			font-size: 1.5rem;
+			color: rgb(236, 232, 232);
+
+			& i {
+				font-size: 2rem;
+			}
+
+			&:hover {
+				border-radius: 0.5rem;
+				background: #343434;
+			}
+		}
+	}
+
+	&__right {
+		flex: 0.2;
+	}
+}
+
+.leave_meeting {
+	color: #ce1212;
+}
