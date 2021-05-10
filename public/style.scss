@@ -75,9 +75,58 @@ video {
 
 	&__right {
 		flex: 0.2;
+		display: flex;
+		flex-direction: column;
+		background: #242324;
+		border-left: 1px solid #3d3d42;
+	}
+
+	&__header {
+		text-align: center;
+		color: #000;
+		background: #fff;
+
+		padding: 0.5rem 0;
+	}
+
+	&__chat-window {
+		flex-grow: 1;
+		overflow-y: scroll;
+		padding: 1rem;
+		background: #334443;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		& ul {
+			color: white;
+			font-size: 2rem;
+		}
+	}
+
+	&__message_container {
+		display: flex;
+		padding: 1.4rem 1.2rem;
+		background: #fff;
+
+		& input {
+			flex-grow: 1;
+			border: none;
+			background: transparent;
+			padding: 1rem;
+
+			&:focus {
+				outline: none;
+				border-bottom: 1px solid #3d3d42;
+			}
+		}
 	}
 }
 
-.leave_meeting {
+// special classes
+.leave_meeting,
+.unmute,
+.stop {
 	color: #ce1212;
 }
